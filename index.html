@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example Web Component</title>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/ShadowDOM.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/CustomElements.min.js"></script> -->
+  <script src="x-hello.js"></script>
+  <style>
+    body {
+      font-family: tahoma;
+      font-size: 13px;
+    }
+
+    .hello-blue {
+      background-color: lightblue;
+      border: 1px solid darkblue;
+      --button-background-color: white;
+      --button-border-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Example custom component?</h1>
+  <p>This is an example component called <strong>x-hello</strong> that uses custom components and the shadow dom.</p>
+
+  <x-hello id="myHello" class="hello-blue">Mark</x-hello>
+
+  <script>
+    document.getElementById('myHello').onclick = function() {
+      this.setName('Kaj')
+    }
+  </script>
+</body>
+</html>
