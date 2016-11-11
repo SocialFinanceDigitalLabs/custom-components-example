@@ -3,34 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Example Web Component</title>
+  <title>Select Web Component</title>
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/ShadowDOM.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/CustomElements.min.js"></script> -->
-  <script src="x-hello.js"></script>
+  <script src="x-select.js"></script>
   <style>
     body {
       font-family: tahoma;
       font-size: 13px;
     }
-
-    .hello-blue {
-      background-color: lightblue;
-      border: 1px solid darkblue;
-      --button-background-color: white;
-      --button-border-color: gray;
-    }
   </style>
 </head>
 <body>
-  <h1>Example custom component?</h1>
-  <p>This is an example component called <strong>x-hello</strong> that uses custom components and the shadow dom.</p>
+  <h1>Select Web Component?</h1>
+  <p>This is a select element that uses custom components.</p>
 
-  <x-hello id="myHello" class="hello-blue">Mark</x-hello>
+  <x-select id="myHello">
+    <x-optgroup label="Numbers">
+      <x-option value="one" selected><strong>1:</strong> One</x-option>
+      <x-option value="two"><strong>2: </strong>Two</x-option>
+      <x-option value="three"><strong>3: </strong>Three</x-option>
+    </x-optgroup>
 
-  <script>
-    document.getElementById('myHello').onclick = function() {
-      this.setName('Kaj')
-    }
-  </script>
+    <x-optgroup label="Letters">
+      <x-option value="a" selected><strong>a:</strong> A</x-option>
+      <x-option value="b"><strong>b: </strong>B</x-option>
+      <x-option value="c"><strong>c: </strong>C</x-option>
+    </x-optgroup>
+  </x-select>
+
+  <h2>With fixed width?</h1>
+  <p>This is a select element that uses custom components with a fixed width.</p>
+
+  <x-select id="myHello" style="width: 100px;">
+    <x-optgroup label="Numbers">
+      <x-option value="one" selected><strong>1:</strong> One</x-option>
+      <x-option value="two"><strong>2: </strong>Two</x-option>
+      <x-option value="three"><strong>3: </strong>Three</x-option>
+    </x-optgroup>
+
+    <x-optgroup label="Letters">
+      <x-option value="a" selected><strong>a:</strong> A</x-option>
+      <x-option value="b"><strong>b: </strong>B</x-option>
+      <x-option value="c"><strong>c: </strong>C</x-option>
+    </x-optgroup>
+  </x-select>
+
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  <p>Some extra text. Some extra text. Some extra text. Some extra text. Some extra text.</p>
+  
+
 </body>
 </html>
